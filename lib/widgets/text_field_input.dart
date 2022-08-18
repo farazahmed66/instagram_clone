@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class TextFieldInput extends StatelessWidget {
-  final TextEditingController textEditingController;
+  final TextEditingController? textEditingController;
   final bool isPass;
-  final String hintText;
-  final TextInputType textInputType;
+  final String? hintText;
+  final TextInputType? textInputType;
 
   const TextFieldInput(
-      {Key key,
+      {Key? key,
       this.textEditingController,
       this.isPass = false,
       this.hintText,

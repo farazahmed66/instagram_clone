@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone_flutter/utils/dimension.dart';
+import 'package:instagram_clone_flutter/utils/global_variable.dart';
 
 class ResponsiveLayout extends StatelessWidget {
-  final Widget webScreenLayout;
-  final Widget mobileScreenLayout;
+  final Widget? webScreenLayout;
+  final Widget? mobileScreenLayout;
 
-  const ResponsiveLayout({Key key, this.webScreenLayout, this.mobileScreenLayout }) : super(key: key);
+  const ResponsiveLayout({Key? key, this.webScreenLayout, this.mobileScreenLayout }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         if(constraints.maxWidth > webScreenSize){
-          return webScreenLayout;
+          return webScreenLayout!;
         }else{
-          return mobileScreenLayout;
+          return mobileScreenLayout!;
         }
       }
     );
